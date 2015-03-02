@@ -10,3 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', 'home.views.home'),
     url(r'^member/', include('member.urls')),
 )
+
+urlpatterns += patterns('',
+    (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+)
