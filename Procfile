@@ -1,1 +1,1 @@
-web: python manage.py collectstatic --noinput ; gunicorn myapp.wsgi
+web: python djtest/manage.py runserver "0.0.0.0:$PORT" 
